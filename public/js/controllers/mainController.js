@@ -1,7 +1,9 @@
-scotchTodo.controller('mainController',  function($scope, $http) {
+function mainCtrl($scope, $http) {
+  $scope.title = "awesome web"
   $scope.formData = {};
 
   // when landing on the page, get all todos and show them
+  // TODO, delegate $http to model level, basically, create a Todo Service
   $http.get('/api/todos')
     .success(function(data) {
       $scope.todos = data;
@@ -35,7 +37,6 @@ scotchTodo.controller('mainController',  function($scope, $http) {
       console.log('Error: ' + data);
     });
   };
+}
 
-});
-
-
+angular.module("scotchTodoApp").controller('mainCtrl', mainCtrl);
