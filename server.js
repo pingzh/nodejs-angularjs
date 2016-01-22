@@ -17,7 +17,7 @@ app.use(methodOverride());
 
 
 // routes under api/ ===========================================================
-app.use('/api/', apiRouter);
+// app.use('/api/', apiRouter);
 
 // listen (start app with node server.js) ======================================
 //
