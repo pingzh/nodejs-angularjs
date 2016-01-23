@@ -1,5 +1,5 @@
 function mainCtrl($scope, $http) {
-  $scope.title = "awesome web"
+  $scope.title = "psi share"
   $scope.formData = {};
 
   // when landing on the page, get all todos and show them

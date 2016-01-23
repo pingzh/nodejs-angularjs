@@ -1,0 +1,39 @@
+body {
+  padding-top: 70px;
+}
+
+.nav > li > a {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.center {
+  left:25%;
+}
+
+.transparent-input {
+   background-color: rgba(255,255,255,0.6);
+   border:none;
+}
+
+
+.backstretch img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.glyphicon.text-muted {
+   background-color: rgba(255,255,255,0.3);
+   border:none;
+}
+
+.main-search {
+  padding-top: 90px;
+}
+
+@media (max-width: 600px) {
+  .main-search {
+    padding-top: 80px;
+  }
+}
+
