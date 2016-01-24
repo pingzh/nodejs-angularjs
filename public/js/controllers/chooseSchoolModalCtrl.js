@@ -9,8 +9,7 @@ function chooseSchoolModalCtrl($scope, $uibModal, $log) {
   $scope.animationsEnabled = true;
 
   $scope.open = function() {
-    console.log(6);
-    var modalInstance = $uibModal.open({
+    $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'js/directives/chooseSchoolModal.html',
       controller: 'modalInstanceCtrl',
@@ -20,27 +19,22 @@ function chooseSchoolModalCtrl($scope, $uibModal, $log) {
         }
       }
     });
-
   };
+
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
 }
 
-angular.module("scotchTodoApp").controller('chooseSchoolModalCtrl', chooseSchoolModalCtrl);
+angular.module("psi").controller('chooseSchoolModalCtrl', chooseSchoolModalCtrl);
 
-angular.module('scotchTodoApp').controller('modalInstanceCtrl', function ($scope, $uibModalInstance, $http, schools) {
-  console.log(1);
-  //init data
+angular.module("psi").controller('modalInstanceCtrl', function ($scope, $uibModalInstance, $http, schools) {
   $scope.schools = schools;
   $scope.selected = $scope.schools[0];
 
   $scope.ok = function () {
-    console.log(3);
-    console.log($scope.selected);
-    $uibModalInstance.close($scope.selected);
+    $uibModalInstance.close();
     $http.post('/api/set_current_school', $scope.selected)
-    console.log(11);
   };
 
   $scope.cancel = function () {

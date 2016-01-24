@@ -1,4 +1,4 @@
-angular.module("scotchTodoApp").directive('mainNav', function() {
+angular.module("psi").directive('mainNav', function() {
   return {
     restrict: 'E',
     scope: {

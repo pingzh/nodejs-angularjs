@@ -39,4 +39,4 @@ function mainCtrl($scope, $http) {
   // };
 }
 
-angular.module("scotchTodoApp").controller('mainCtrl', mainCtrl);
+angular.module("psi").controller('mainCtrl', mainCtrl);

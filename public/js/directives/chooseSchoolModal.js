@@ -1,4 +1,4 @@
-angular.module("scotchTodoApp").directive('chooseSchoolModal', function() {
+angular.module("psi").directive('chooseSchoolModal', function() {
   return {
     restrict: 'E',
     scope: {
