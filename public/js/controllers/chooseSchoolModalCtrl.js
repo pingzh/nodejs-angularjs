@@ -33,8 +33,16 @@ angular.module("psi").controller('modalInstanceCtrl', function ($scope, $uibModa
   $scope.selected = $scope.schools[0];
 
   $scope.ok = function () {
+    console.log($scope.selected)
+
     $uibModalInstance.close();
     $http.post('/api/set_current_school', $scope.selected)
+    .then(function successCallback(response) {
+      console.log(response)
+      console.log("success")
+    }, function errorCallback(response) {
+      console.log("failed")
+    });
   };
 
   $scope.cancel = function () {

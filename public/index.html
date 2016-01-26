@@ -24,15 +24,15 @@
 
     <div class="container-fluid">
 
-      <div class="row main-search">
+      <div class="row main-search" ng-controller="searchCtrl">
         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
-          <div class="input-group">
-            <input type="text" class="form-control transparent-input" placeholder="For example: eecs 482">
-            <span class="input-group-btn">
-              <button class="btn btn-default transparent-input" type="submit"> Go </button>
-            </span>
-          </div><!-- /input-group -->
+            <div class="input-group">
+              <input type="text" class="form-control transparent-input" placeholder="Course Number">
+              <span class="input-group-btn">
+                <button class="btn btn-default transparent-input" type="submit"> Go </button>
+              </span>
+            </div><!-- /input-group -->
 
         </div><!-- /.col-md-6 -->
       </div><!-- /.row -->
@@ -49,6 +49,10 @@
     <script src="js/vendors/ui-bootstrap-tpls-1.1.0.min.js"></script>
     <script src="js/vendors/dropdownsEnhancement.js"></script>
 
+    <script src="js/vendors/jquery.cookie.js"></script>
+    <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+    <script src="bower_components/typeahead.js/dist/bloodhound.min.js"></script>
+
     <!-- end external library -->
 
     <!-- angular app js -->
@@ -56,6 +60,7 @@
     <!-- angular controllers -->
     <script src="js/controllers/mainController.js"></script>
     <script src="js/controllers/chooseSchoolModalCtrl.js"></script>
+    <script src="js/controllers/searchCtrl.js"></script>
     <!-- angular directives -->
     <script src="js/directives/mainNav.js"></script>
 

@@ -12,10 +12,9 @@ body {
 }
 
 .transparent-input {
-   background-color: rgba(255,255,255,0.6);
-   border:none;
+   /* background-color: rgba(255,255,255,0.6); */
+   /* border:none; */
 }
-
 
 .backstretch img {
   opacity: 0.6;
