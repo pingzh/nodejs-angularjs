@@ -1,0 +1,18 @@
+<div ng-class="searchBoxRow" ng-controller="searchCourseCtrl">
+  <div ng-class="searchBoxCol">
+    <div class="input-group">
+      <input type="text" ng-keypress="didPressEnter($event)" ng-model="selectedCourse" placeholder="For example: eecs482"
+         uib-typeahead="course for course in getCourses($viewValue)"
+         typeahead-loading="loadingCourses" typeahead-no-results="noResults" class="form-control">
+      <!-- end input -->
+      <span class="input-group-btn">
+        <button ng-click="fireSearch()" class="btn btn-default" type="submit"> Go </button>
+      </span>
+    </div><!-- /input-group -->
+
+    <i ng-show="loadingCourses" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+      <i class="glyphicon glyphicon-remove"></i> No Results Found
+    </div>
+  </div><!-- /.col-md-6 -->
+</div><!-- /.row -->

@@ -16,6 +16,14 @@ body {
    /* border:none; */
 }
 
+.main-search {
+  position: fixed;
+}
+
+.search-result {
+  /* padding-top: 80px; */
+}
+
 .backstretch img {
   opacity: 0.6;
   filter: alpha(opacity=60);
@@ -26,13 +34,9 @@ body {
    border:none;
 }
 
-.main-search {
-  padding-top: 90px;
-}
-
 @media (max-width: 600px) {
   .main-search {
-    padding-top: 80px;
+    /* padding-top: 80px; */
   }
 }
 
