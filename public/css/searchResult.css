@@ -79,8 +79,8 @@
 }
 @media (min-width: 768px) {
   .main {
-    /* padding-right: 40px; */
-    /* padding-left: 40px; */
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 .main .page-header {
@@ -104,15 +104,29 @@
 }
 .placeholder img {
   display: inline-block;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+}
+
+.content-wrapper {
+  -webkit-flex: 1 1 160px;
+  -moz-flex: 1 1 160px;
+  -ms-flex: 1 1 160px;
+  flex: 1 1 160px;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  min-width: 160px;
+  max-width: 160px;
+}
+
+.thumbnail{
+    vertical-align: middle !important;
 }
 
 .content {
-  /* border: 1px, solid #eee; */
   border: 1px solid #bfbfbf !important;
   background: #fff url(//siteimages.textbooks.com/img/search/srch6-box-bg.png) repeat-x left top;
-  min-height: 220px;
-  width: 220px;
+  min-height: 150px;
+  width: 150px;
   height: auto;
   overflow: hidden;
   border-radius: 5px;
