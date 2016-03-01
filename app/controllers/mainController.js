@@ -1,20 +1,15 @@
 //export model
-var Todo = require("../models/todo");
+var YourModel = require("../models/yourModel");
 
-var router   = require("express").Router();
+var router = require("express").Router();
 
 
 //set browser cookie to current_school
-router.post("/set_current_school", function(req, res) {
-  var school_id = req.body.id;
-  if(!school_id) {
-    var errorMessage = {
-      school_id: "required"
-    }
-    res.send(JSON.stringify(errorMessage));
-  }
+router.post("/", function(req, res) {
+  // var body_params = req.body.id;
 
-  res.cookie("cs", school_id, { maxAge: 9000000 });
+  //write cookie
+  res.cookie("your-cookie", "value", { maxAge: 9000000 });
   var response = {
     success: "Updated Successfully",
     status: 200
