@@ -1,15 +1,23 @@
 {
-  "name"         : "node-todo",
-  "version"      : "0.0.0",
-  "description"  : "Simple todo application.",
-  "main"         : "server.js",
-  "author"       : "Ping Zhang",
-  "dependencies" : {
-    "express"    : "~4.7.2",
-    "mongoose"   : "~3.6.2",
-    "morgan"     : "~1.2.2",
+  "name": "node-todo",
+  "version": "0.0.0",
+  "description": "Simple todo application.",
+  "main": "server.js",
+  "scripts": {
+    "unit": "mocha app/test/**/**.js",
+    "server": "NODE_ENV=production supervisor server.js"
+  },
+  "author": "Ping Zhang",
+  "dependencies": {
+    "async": "^2.0.1",
     "body-parser": "~1.5.2",
     "cookie-parser": "~1.4.1",
-    "method-override": "~2.1.2"
-    }
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "mongoose": "~3.6.2",
+    "morgan": "~1.2.2",
+    "node-uuid": "^1.4.7",
+    "request": "^2.74.0",
+    "underscore": "^1.8.3"
+  }
 }
